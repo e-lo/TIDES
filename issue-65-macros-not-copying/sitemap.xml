@@ -6,21 +6,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://TIDES-transit.github.io/TIDES/issue-65-macros-not-copying/CODE_OF_CONDUCT/</loc>
-         <lastmod>2022-09-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://TIDES-transit.github.io/TIDES/issue-65-macros-not-copying/CONTRIBUTING/</loc>
-         <lastmod>2022-09-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://TIDES-transit.github.io/TIDES/issue-65-macros-not-copying/architecture/</loc>
-         <lastmod>2022-09-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://TIDES-transit.github.io/TIDES/issue-65-macros-not-copying/architecture.template/</loc>
          <lastmod>2022-09-28</lastmod>
          <changefreq>daily</changefreq>
@@ -31,7 +16,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://TIDES-transit.github.io/TIDES/issue-65-macros-not-copying/tables/</loc>
+         <loc>https://TIDES-transit.github.io/TIDES/issue-65-macros-not-copying/development/</loc>
          <lastmod>2022-09-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
