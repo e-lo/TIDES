@@ -132,18 +132,8 @@
     </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../CONTRIBUTING.md">
-      Contributing
-    </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../contributors.md">
-      Contributors
-    </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../CODE_OF_CONDUCT.md">
-      Code of Conduct
+<a class="md-tabs__link" href="../development/">
+      Development
     </a>
 </li>
 </ul>
@@ -154,7 +144,7 @@
 <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
-<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
 <a aria-label="Transit ITS Data Exchange (TIDES) Data Specification Suite" class="md-nav__button md-logo" data-md-component="logo" href=".." title="Transit ITS Data Exchange (TIDES) Data Specification Suite">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
@@ -189,34 +179,80 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Example Data
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
         Example Data
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-directory-organization">
+    Data Directory Organization
+  </a>
+<nav aria-label="Data Directory Organization" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-validation">
+    Data validation
+  </a>
+<nav aria-label="Data validation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-package">
+    Data Package
+  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../CONTRIBUTING.md">
-        Contributing
-      </a>
+<a class="md-nav__link" href="#specific-files">
+    Specific files
+  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../contributors.md">
-        Contributors
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CODE_OF_CONDUCT.md">
-        Code of Conduct
-      </a>
+<a class="md-nav__link" href="#continuous-data-validation">
+    Continuous Data Validation
+  </a>
 </li>
 </ul>
 </nav>
-</div>
-</div>
-</div>
-<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
-<div class="md-sidebar__scrollwrap">
-<div class="md-sidebar__inner">
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-list">
+    Data List
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example">
+    Example
+  </a>
+<nav aria-label="Example" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#scripts-for-generating-data">
+    Scripts for Generating Data
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../development/">
+        Development
+      </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -228,20 +264,29 @@
 </a>
 <h1 id="example-data">Example Data<a class="headerlink" href="#example-data" title="Permanent link"> ¶</a></h1>
 <p>Example data can be found in the <code>/data</code> directory, with one directory for each example.  </p>
-<h1 id="data-directory-organization">Data Directory Organization<a class="headerlink" href="#data-directory-organization" title="Permanent link"> ¶</a></h1>
+<h2 id="data-directory-organization">Data Directory Organization<a class="headerlink" href="#data-directory-organization" title="Permanent link"> ¶</a></h2>
 <p>Each TIDES Data Package example should follow the following directory structure, consistent with the structure of the <a href="https://specs.frictionlessdata.io/data-package/">Frictionless Data Package specification</a>, including:</p>
 <div class="highlight"><pre><span></span><code>unique-example-name
-  \data     # data to be validated against the TIDES specification
-  \data\datapackages.json # data package metadata per https://specs.frictionlessdata.io/data-package/
-  \raw      # data which the agency uses to create TIDES data
-  \scripts  # scripts used to transform raw --&gt; TIDES
+  \data     ## data to be validated against the TIDES specification
+  \data\datapackages.json ## data package metadata per https://specs.frictionlessdata.io/data-package/
+  \raw      ## data which the agency uses to create TIDES data
+  \scripts  ## scripts used to transform raw --&gt; TIDES
 </code></pre></div>
-<h2 id="data-validation">Data validation<a class="headerlink" href="#data-validation" title="Permanent link"> ¶</a></h2>
+<h4 id="data-validation">Data validation<a class="headerlink" href="#data-validation" title="Permanent link"> ¶</a></h4>
 <p>Data with a valid <code>datapackage.json</code> can be easily validated using the <a href="https://framework.frictionlessdata.io/">frictionless framework</a>, which can be installed and invoke as follows:</p>
 <div class="highlight"><pre><span></span><code>pip install frictionless
 frictionless validate path/to/your/datapackage.json
 </code></pre></div>
-<h3 id="continuous-data-validation">Continuous Data Validation<a class="headerlink" href="#continuous-data-validation" title="Permanent link"> ¶</a></h3>
+<h6 id="data-package">Data Package<a class="headerlink" href="#data-package" title="Permanent link"> ¶</a></h6>
+<p>To validate a package of TIDES data, you must add a frictionless-compliant <a href="https://specs.frictionlessdata.io/data-package/"><code>datapackage.json</code></a> alongside your data which describes which files should be validated to which schemas.  Most of this can be copied from <a href="https://raw.githubusercontent.com/TIDES-transit/TIDES/main/data/example/data/datapackage.json"><code>/data/example/data/datapackage.json</code></a>.</p>
+<p>Once this is created, mapping the data files to the schema, simply run:</p>
+<div class="highlight"><pre><span></span><code>frictionless validate datapackage.json
+</code></pre></div>
+<h6 id="specific-files">Specific files<a class="headerlink" href="#specific-files" title="Permanent link"> ¶</a></h6>
+<p>Specific files can be validated by running the frictionless framework against them and their corresponding schemas as follows:</p>
+<div class="highlight"><pre><span></span><code>frictionless validate vehicles.csv https://raw.githubusercontent.com/TIDES-transit/TIDES/main/spec/schema.vehicles.json
+</code></pre></div>
+<h6 id="continuous-data-validation">Continuous Data Validation<a class="headerlink" href="#continuous-data-validation" title="Permanent link"> ¶</a></h6>
 <p>Example data in the <code>\data</code> subdirectories is validated upon a push action to the main repository according to the <code>TIDES</code> schema posted to the <code>main</code> branch.</p>
 <h2 id="data-list">Data List<a class="headerlink" href="#data-list" title="Permanent link"> ¶</a></h2>
 <ul>
@@ -249,7 +294,7 @@ frictionless validate path/to/your/datapackage.json
 </ul>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link"> ¶</a></h2>
 <p>Template directory for example scaffolding and helper scripts.</p>
-<h2 id="scripts-for-generating-data">Scripts for Generating Data<a class="headerlink" href="#scripts-for-generating-data" title="Permanent link"> ¶</a></h2>
+<h4 id="scripts-for-generating-data">Scripts for Generating Data<a class="headerlink" href="#scripts-for-generating-data" title="Permanent link"> ¶</a></h4>
 <p><code>scripts\create_example.py</code> has some template code which can help with the following</p>
 <ul>
 <li><code>write_schema_examples()</code>: will generate blank csvs according to the TIDES schema</li>
@@ -277,6 +322,19 @@ frictionless validate path/to/your/datapackage.json
             </div>
 </div>
 </a>
+<a aria-label="Next: Development" class="md-footer__link md-footer__link--next" href="../development/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Next
+              </span>
+              Development
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
 </nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
@@ -295,7 +353,7 @@ frictionless validate path/to/your/datapackage.json
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.expand", "toc.integrate"], "search": "../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
 <script src="../assets/javascripts/bundle.078830c0.min.js"></script>
 <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
 </body>

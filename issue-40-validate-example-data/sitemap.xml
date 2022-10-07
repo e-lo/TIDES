@@ -11,7 +11,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://TIDES-transit.github.io/TIDES/issue-40-validate-example-data/architecture.template/</loc>
+         <loc>https://TIDES-transit.github.io/TIDES/issue-40-validate-example-data/contributors/</loc>
          <lastmod>2022-10-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -27,11 +27,6 @@
     </url>
     <url>
          <loc>https://TIDES-transit.github.io/TIDES/issue-40-validate-example-data/tables/</loc>
-         <lastmod>2022-10-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://TIDES-transit.github.io/TIDES/issue-40-validate-example-data/tables.template/</loc>
          <lastmod>2022-10-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
