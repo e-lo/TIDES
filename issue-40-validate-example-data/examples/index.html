@@ -23,7 +23,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#examples">
+<a class="md-skip" href="#example-data">
           Skip to content
         </a>
 </div>
@@ -184,36 +184,9 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          Example Data
-          <span class="md-nav__icon md-icon"></span>
-</label>
 <a class="md-nav__link md-nav__link--active" href="./">
         Example Data
       </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#example-validation">
-    Example validation
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#example-directory-organization">
-    Example Directory Organization
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#example-list">
-    Example List
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -224,27 +197,6 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#example-validation">
-    Example validation
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#example-directory-organization">
-    Example Directory Organization
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#example-list">
-    Example List
-  </a>
-</li>
-</ul>
 </nav>
 </div>
 </div>
@@ -254,20 +206,38 @@
 <a class="md-content__button md-icon" href="https://github.com/TIDES-transit/TIDES/edit/main/docs/examples.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link"> ¶</a></h1>
-<p><a href="https://repository.frictionlessdata.io/pages/dashboard.html?user=TIDES-transit&amp;repo=TIDES&amp;flow=validate-data"><img alt="Example Data" src="https://github.com/TIDES-transit/TIDES/actions/workflows/validate-data.yaml/badge.svg"/></a></p>
+<h1 id="example-data">Example Data<a class="headerlink" href="#example-data" title="Permanent link"> ¶</a></h1>
 <p>Example data can be found in the <code>/data</code> directory, with one directory for each example.  </p>
-<h2 id="example-validation">Example validation<a class="headerlink" href="#example-validation" title="Permanent link"> ¶</a></h2>
-<p>Example data in the <code>\TIDES</code> subdirectories is validated upon a push action to the main repository according to the <code>TIDES</code> schema contained in the respective repository commit.</p>
-<h2 id="example-directory-organization">Example Directory Organization<a class="headerlink" href="#example-directory-organization" title="Permanent link"> ¶</a></h2>
-<p>Each example should follow the following directory structure:</p>
+<h1 id="data-directory-organization">Data Directory Organization<a class="headerlink" href="#data-directory-organization" title="Permanent link"> ¶</a></h1>
+<p>Each TIDES Data Package example should follow the following directory structure, consistent with the structure of the <a href="https://specs.frictionlessdata.io/data-package/">Frictionless Data Package specification</a>, including:</p>
 <div class="highlight"><pre><span></span><code>unique-example-name
-  \TIDES    # data to be validated against the TIDES specification
+  \data     # data to be validated against the TIDES specification
+  \data\datapackages.json # data package metadata per https://specs.frictionlessdata.io/data-package/
   \raw      # data which the agency uses to create TIDES data
   \scripts  # scripts used to transform raw --&gt; TIDES
 </code></pre></div>
-<h2 id="example-list">Example List<a class="headerlink" href="#example-list" title="Permanent link"> ¶</a></h2>
-<p>{{ testingme }}</p>
+<h2 id="data-validation">Data validation<a class="headerlink" href="#data-validation" title="Permanent link"> ¶</a></h2>
+<p>Data with a valid <code>datapackage.json</code> can be easily validated using the <a href="https://framework.frictionlessdata.io/">frictionless framework</a>, which can be installed and invoke as follows:</p>
+<div class="highlight"><pre><span></span><code>pip install frictionless
+frictionless validate path/to/your/datapackage.json
+</code></pre></div>
+<h3 id="continuous-data-validation">Continuous Data Validation<a class="headerlink" href="#continuous-data-validation" title="Permanent link"> ¶</a></h3>
+<p>Example data in the <code>\data</code> subdirectories is validated upon a push action to the main repository according to the <code>TIDES</code> schema posted to the <code>main</code> branch.</p>
+<h2 id="data-list">Data List<a class="headerlink" href="#data-list" title="Permanent link"> ¶</a></h2>
+<ul>
+<li><a href="#example">Example</a></li>
+</ul>
+<h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link"> ¶</a></h2>
+<p>Template directory for example scaffolding and helper scripts.</p>
+<h2 id="scripts-for-generating-data">Scripts for Generating Data<a class="headerlink" href="#scripts-for-generating-data" title="Permanent link"> ¶</a></h2>
+<p><code>scripts\create_example.py</code> has some template code which can help with the following</p>
+<ul>
+<li><code>write_schema_examples()</code>: will generate blank csvs according to the TIDES schema</li>
+<li><code>write_datapackage()</code> will generate a datapackage.json based on the TIDES schemas and a set of defaults specified in th script.</li>
+</ul>
+<p>To run both (note this replaces the existing files in the directory)</p>
+<div class="highlight"><pre><span></span><code>python data/example/scripts/create_example.py
+</code></pre></div>
 </article>
 </div>
 </div>
