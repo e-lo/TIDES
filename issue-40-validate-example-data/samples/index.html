@@ -427,7 +427,7 @@ frictionless validate path/to/your/datapackage.json
 </code></pre></div>
 <h6 id="specific-files">Specific files<a class="headerlink" href="#specific-files" title="Permanent link"> ¶</a></h6>
 <p>Specific files can be validated by running the frictionless framework against them and their corresponding schemas as follows:</p>
-<div class="highlight"><pre><span></span><code>frictionless validate vehicles.csv https://raw.githubusercontent.com/TIDES-transit/TIDES/main/spec/schema.vehicles.json
+<div class="highlight"><pre><span></span><code>frictionless validate vehicles.csv --schema https://raw.githubusercontent.com/TIDES-transit/TIDES/main/spec/vehicles.schema.json
 </code></pre></div>
 <h6 id="continuous-data-validation">Continuous Data Validation<a class="headerlink" href="#continuous-data-validation" title="Permanent link"> ¶</a></h6>
 <p>Example data in the <code>\TIDES</code> subdirectories is validated upon a push action to the main repository according to the <code>TIDES</code> schema posted to the <code>main</code> branch.</p>
