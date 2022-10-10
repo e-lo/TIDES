@@ -265,20 +265,20 @@ Human-friendlier documentation is auto-generated and available at:</p>
 <li><a href="tables">Table Schemas</a></li>
 </ul>
 <h2 id="example-data">Example Data<a class="headerlink" href="#example-data" title="Permanent link"> ¶</a></h2>
-<p>Example data can be found in the <code>/data</code> directory, with one directory for each example.  </p>
+<p>Sample data can be found in the <code>/samples</code> directory, with one directory for each example.  </p>
 <h2 id="validating-tides-data">Validating TIDES data<a class="headerlink" href="#validating-tides-data" title="Permanent link"> ¶</a></h2>
 <p>TIDES data with a valid <a href="#data-package"><code>datapackage.json</code></a> can be easily validated using the <a href="https://framework.frictionlessdata.io/">frictionless framework</a>, which can be installed and invoke as follows:</p>
 <div class="highlight"><pre><span></span><code>pip install frictionless
 frictionless validate path/to/your/datapackage.json
 </code></pre></div>
 <h3 id="data-package">Data Package<a class="headerlink" href="#data-package" title="Permanent link"> ¶</a></h3>
-<p>To validate a package of TIDES data, you must add a frictionless-compliant <a href="https://specs.frictionlessdata.io/data-package/"><code>datapackage.json</code></a> alongside your data which describes which files should be validated to which schemas.  Most of this can be copied from <a href="https://raw.githubusercontent.com/TIDES-transit/TIDES/main/data/template/TIDES/datapackage.json"><code>/data/template/TIDES/datapackage.json</code></a>.</p>
+<p>To validate a package of TIDES data, you must add a frictionless-compliant <a href="https://specs.frictionlessdata.io/data-package/"><code>datapackage.json</code></a> alongside your data which describes which files should be validated to which schemas.  Most of this can be copied from <a href="https://raw.githubusercontent.com/TIDES-transit/TIDES/main/data/template/datapackage.json"><code>/data/template/datapackage.json</code></a>.</p>
 <p>Once this is created, mapping the data files to the schema, simply run:</p>
 <div class="highlight"><pre><span></span><code>frictionless validate datapackage.json
 </code></pre></div>
 <h3 id="specific-files">Specific files<a class="headerlink" href="#specific-files" title="Permanent link"> ¶</a></h3>
 <p>Specific files can be validated by running the frictionless framework against them and their corresponding schemas as follows:</p>
-<div class="highlight"><pre><span></span><code>frictionless validate vehicles.csv https://raw.githubusercontent.com/TIDES-transit/TIDES/main/spec/schema.vehicles.json
+<div class="highlight"><pre><span></span><code>frictionless validate vehicles.csv --schema https://raw.githubusercontent.com/TIDES-transit/TIDES/main/spec/schema.vehicles.json
 </code></pre></div>
 <h2 id="contributing-to-tides">Contributing to TIDES<a class="headerlink" href="#contributing-to-tides" title="Permanent link"> ¶</a></h2>
 <p>Those who want to help with the development of the TIDES specification should review the guidance in <a href="development/#CONTRIBUTING">Contributing Section</a>.</p>
