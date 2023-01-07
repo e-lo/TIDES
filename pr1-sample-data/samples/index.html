@@ -23,7 +23,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#macro-rendering-error">
+<a class="md-skip" href="#sample-data">
           Skip to content
         </a>
 </div>
@@ -179,9 +179,83 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Sample Data
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
         Sample Data
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-directory-organization">
+    Data Directory Organization
+  </a>
+<nav aria-label="Data Directory Organization" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-examples">
+    Adding Examples
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-package">
+    Data Package
+  </a>
+<nav aria-label="Data Package" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#template">
+    Template
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-resource">
+    Data Resource
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-source">
+    Data Source
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-validation">
+    Data validation
+  </a>
+<nav aria-label="Data validation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#specific-files">
+    Specific files
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#continuous-data-validation">
+    Continuous Data Validation
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-list">
+    Data List
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../development/">
@@ -198,26 +272,184 @@
 <a class="md-content__button md-icon" href="https://github.com/TIDES-transit/TIDES/edit/main/docs/samples.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1 id="macro-rendering-error"><em>Macro Rendering Error</em><a class="headerlink" href="#macro-rendering-error" title="Permanent link"> ¶</a></h1>
-<p><strong>ValueError</strong>: Can’t find datapackage file:
-   /home/runner/work/TIDES/TIDES/samples/template/datapackage.json.</p>
-<div class="highlight"><pre><span></span><code>Traceback (most recent call last):
-  File "/opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/mkdocs_macros/plugin.py", line 480, in render
-    return md_template.render(**page_variables)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
-    self.environment.handle_exception()
-  File "/opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "&lt;template&gt;", line 9, in top-level template code
-  File "/home/runner/work/TIDES/TIDES/main.py", line 50, in list_samples
-    md_table += datapackage_to_row(os.path.join(data_dir, s), fields)
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/TIDES/TIDES/main.py", line 177, in datapackage_to_row
-    raise ValueError(f"Can't find datapackage file:\n   {dp_filename}.")
-ValueError: Can't find datapackage file:
-   /home/runner/work/TIDES/TIDES/samples/template/datapackage.json.
+<h1 id="sample-data">Sample Data<a class="headerlink" href="#sample-data" title="Permanent link"> ¶</a></h1>
+<p>Sample data can be found in the <code>/samples</code> directory, with one directory for each data sample.  </p>
+<h2 id="data-directory-organization">Data Directory Organization<a class="headerlink" href="#data-directory-organization" title="Permanent link"> ¶</a></h2>
+<p>Each TIDES Data Package example should follow the following directory structure, consistent with the structure of the <a href="https://specs.frictionlessdata.io/data-package/">Frictionless Data Package specification</a>, including:</p>
+<div class="highlight"><pre><span></span><code>unique-example-name
+  \TIDES     ## Required. Data to be validated against the TIDES specification
+  \datapackages.json ## Required. Data package metadata per https://specs.frictionlessdata.io/data-package/
+  \raw      ## Optional. Data which the agency uses to create TIDES data
+  \scripts  ## Optional. Scripts used to transform raw --&gt; TIDES
 </code></pre></div>
+<h4 id="adding-examples">Adding Examples<a class="headerlink" href="#adding-examples" title="Permanent link"> ¶</a></h4>
+<p>We encourage the addition of examples, but please follow the following guidelines:</p>
+<ol>
+<li><em>No large files</em> This isn’t the place to store your data, rather to document some minimal examples.  The recommended size is 100-1000 records per file, more if absolutely required to reproduce an issue with the spec.  All individual files should be well under 50 MB.  </li>
+<li><em>Include Metadata</em> as specified in <a href="#data-package"><code>datapackage.json</code></a>.</li>
+<li><em>Include a README.md</em> in the base folder of your example with an overview so that it can be included in the documentation.</li>
+</ol>
+<h4 id="data-package">Data Package<a class="headerlink" href="#data-package" title="Permanent link"> ¶</a></h4>
+<p>TIDES data packages must include a <a href="https://specs.frictionlessdata.io/data-package/"><code>datapackage.json</code></a>.  Key information to include in <a href="https://specs.frictionlessdata.io/data-package/"><code>datapackage.json</code></a> includes:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Field</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Required</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>title</code></td>
+<td>A human-readable title.</td>
+<td>Required</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>Identifier string as a URL-friendly slug.</td>
+<td>Required</td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>Short description of data package.</td>
+<td>Recommended</td>
+</tr>
+<tr>
+<td><code>agency</code></td>
+<td>Transit agency name.</td>
+<td>Recommended</td>
+</tr>
+<tr>
+<td><code>ntd_id</code></td>
+<td>ID for the National Transit Database.</td>
+<td>Recommended</td>
+</tr>
+<tr>
+<td><code>profile</code></td>
+<td>Should be <code>tabular-data-package</code></td>
+<td>Required</td>
+</tr>
+<tr>
+<td><code>licenses</code></td>
+<td>Should be <code>[{"name": "Apache-2.0"}]</code> to be consistent with this repository</td>
+<td>Required</td>
+</tr>
+<tr>
+<td><code>contributors</code></td>
+<td>Array of data contributors <code>[{"title": "My Name", "github": "my_handle", "email": "me@myself.com"}]</code></td>
+<td>Recommended</td>
+</tr>
+<tr>
+<td><code>maintainers</code></td>
+<td>Array of data maintainers <code>[{"title": "My Name", "github": "my_handle", "email": "me@myself.com"}]</code></td>
+<td>Recommended</td>
+</tr>
+<tr>
+<td><code>resources</code></td>
+<td>Array of data files included in your package, formated as a <a href="#data-resource"><code>tabular-data-resource</code></a></td>
+<td>Required</td>
+</tr>
+</tbody>
+</table>
+<h6 id="template">Template<a class="headerlink" href="#template" title="Permanent link"> ¶</a></h6>
+<p>A <code>datapackage.json</code> template is available at <a href="https://raw.githubusercontent.com/TIDES-transit/TIDES/main/data/template/TIDES/datapackage.json"><code>/data/template/TIDES/datapackage.json</code></a>.</p>
+<p>Once <code>datapackage.json</code> is created for your data, you can easily conduct <a href="#data-validation">data validation</a> using a variet of tools.</p>
+<h6 id="data-resource">Data Resource<a class="headerlink" href="#data-resource" title="Permanent link"> ¶</a></h6>
+<p>Key fields for each <a href="https://specs.frictionlessdata.io/tabular-data-resource/"><code>tabular-data-resource</code></a> are as follows:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Field</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Required</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>Short sluggable name used to refer to data in this file.</td>
+<td>Required</td>
+</tr>
+<tr>
+<td><code>path</code></td>
+<td>Path of the data resource file relative to the <code>datapackage.json</code></td>
+<td>Required</td>
+</tr>
+<tr>
+<td><code>schema</code></td>
+<td>Data schema to use to valdiate the data resource to</td>
+<td>Required</td>
+</tr>
+<tr>
+<td><code>sources</code></td>
+<td>Array of data sources formatted as a <a href="#data-source"><code>source</code></a></td>
+<td>Recommended</td>
+</tr>
+</tbody>
+</table>
+<h6 id="data-source">Data Source<a class="headerlink" href="#data-source" title="Permanent link"> ¶</a></h6>
+<table>
+<thead>
+<tr>
+<th><strong>Field</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Required</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>title</code></td>
+<td>Description of the data source.</td>
+<td>Required</td>
+</tr>
+<tr>
+<td><code>component</code></td>
+<td>What technology component was used to generate this data (directly or indirectly)? Examples include <code>AVL</code>, <code>APC</code>, <code>AFC</code>, etc.</td>
+<td>Recommended</td>
+</tr>
+<tr>
+<td><code>product</code></td>
+<td>What product was used to generate this data (directly or indirectly)?</td>
+<td>Recommended</td>
+</tr>
+<tr>
+<td><code>vendor</code></td>
+<td>What company makes this product?</td>
+<td>Recommended</td>
+</tr>
+</tbody>
+</table>
+<h4 id="data-validation">Data validation<a class="headerlink" href="#data-validation" title="Permanent link"> ¶</a></h4>
+<p>Data with a valid <a href="#data-package"><code>datapackage.json</code></a> can be easily validated using the <a href="https://framework.frictionlessdata.io/">frictionless framework</a>, which can be installed and invoke as follows:</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>frictionless
+frictionless<span class="w"> </span>validate<span class="w"> </span>path/to/your/datapackage.json
+</code></pre></div>
+<h6 id="specific-files">Specific files<a class="headerlink" href="#specific-files" title="Permanent link"> ¶</a></h6>
+<p>Specific files can be validated by running the frictionless framework against them and their corresponding schemas as follows:</p>
+<div class="highlight"><pre><span></span><code>frictionless<span class="w"> </span>validate<span class="w"> </span>vehicles.csv<span class="w"> </span>--schema<span class="w"> </span>https://raw.githubusercontent.com/TIDES-transit/TIDES/main/spec/vehicles.schema.json
+</code></pre></div>
+<h6 id="continuous-data-validation">Continuous Data Validation<a class="headerlink" href="#continuous-data-validation" title="Permanent link"> ¶</a></h6>
+<p>Example data in the <code>\TIDES</code> subdirectories is validated upon a push action to the main repository according to the <code>TIDES</code> schema posted to the <code>main</code> branch.</p>
+<h2 id="data-list">Data List<a class="headerlink" href="#data-list" title="Permanent link"> ¶</a></h2>
+<table>
+<thead>
+<tr>
+<th><em>Sample</em>*</th>
+<th><strong>Agency</strong></th>
+<th><strong>Resources</strong></th>
+<th>*<em>Vendors</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 </article>
 </div>
 </div>
