@@ -210,11 +210,6 @@
 <nav aria-label="Data Package" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#template">
-    Template
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#data-resource">
     Data Resource
   </a>
@@ -236,11 +231,6 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#specific-files">
     Specific files
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#continuous-data-validation">
-    Continuous Data Validation
   </a>
 </li>
 </ul>
@@ -278,7 +268,7 @@
 <p>Each TIDES Data Package example should follow the following directory structure, consistent with the structure of the <a href="https://specs.frictionlessdata.io/data-package/">Frictionless Data Package specification</a>, including:</p>
 <div class="highlight"><pre><span></span><code>unique-example-name
   \TIDES     ## Required. Data to be validated against the TIDES specification
-  \datapackages.json ## Required. Data package metadata per https://specs.frictionlessdata.io/data-package/
+  \datapackage.json ## Required. Data package metadata per https://specs.frictionlessdata.io/data-package/
   \raw      ## Optional. Data which the agency uses to create TIDES data
   \scripts  ## Optional. Scripts used to transform raw --&gt; TIDES
 </code></pre></div>
@@ -352,9 +342,6 @@
 </tr>
 </tbody>
 </table>
-<h6 id="template">Template<a class="headerlink" href="#template" title="Permanent link"> ¶</a></h6>
-<p>A <code>datapackage.json</code> template is available at <a href="https://raw.githubusercontent.com/TIDES-transit/TIDES/main/data/template/TIDES/datapackage.json"><code>/data/template/TIDES/datapackage.json</code></a>.</p>
-<p>Once <code>datapackage.json</code> is created for your data, you can easily conduct <a href="#data-validation">data validation</a> using a variet of tools.</p>
 <h6 id="data-resource">Data Resource<a class="headerlink" href="#data-resource" title="Permanent link"> ¶</a></h6>
 <p>Key fields for each <a href="https://specs.frictionlessdata.io/tabular-data-resource/"><code>tabular-data-resource</code></a> are as follows:</p>
 <table>
@@ -429,8 +416,6 @@ frictionless<span class="w"> </span>validate<span class="w"> </span>path/to/your
 <p>Specific files can be validated by running the frictionless framework against them and their corresponding schemas as follows:</p>
 <div class="highlight"><pre><span></span><code>frictionless<span class="w"> </span>validate<span class="w"> </span>vehicles.csv<span class="w"> </span>--schema<span class="w"> </span>https://raw.githubusercontent.com/TIDES-transit/TIDES/main/spec/vehicles.schema.json
 </code></pre></div>
-<h6 id="continuous-data-validation">Continuous Data Validation<a class="headerlink" href="#continuous-data-validation" title="Permanent link"> ¶</a></h6>
-<p>Example data in the <code>\TIDES</code> subdirectories is validated upon a push action to the main repository according to the <code>TIDES</code> schema posted to the <code>main</code> branch.</p>
 <h2 id="data-list">Data List<a class="headerlink" href="#data-list" title="Permanent link"> ¶</a></h2>
 <table>
 <thead>
