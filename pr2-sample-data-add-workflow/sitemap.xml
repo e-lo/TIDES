@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://TIDES-transit.github.io/TIDES/pr2-sample-data-add-workflow/</loc>
+         <lastmod>2023-01-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://TIDES-transit.github.io/TIDES/pr2-sample-data-add-workflow/architecture/</loc>
+         <lastmod>2023-01-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://TIDES-transit.github.io/TIDES/pr2-sample-data-add-workflow/contributors/</loc>
+         <lastmod>2023-01-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://TIDES-transit.github.io/TIDES/pr2-sample-data-add-workflow/development/</loc>
+         <lastmod>2023-01-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://TIDES-transit.github.io/TIDES/pr2-sample-data-add-workflow/samples/</loc>
+         <lastmod>2023-01-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://TIDES-transit.github.io/TIDES/pr2-sample-data-add-workflow/tables/</loc>
+         <lastmod>2023-01-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+</urlset>
