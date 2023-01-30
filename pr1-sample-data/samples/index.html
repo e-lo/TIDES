@@ -408,13 +408,13 @@
 </tbody>
 </table>
 <h4 id="data-validation">Data validation<a class="headerlink" href="#data-validation" title="Permanent link"> ¶</a></h4>
-<p>Data with a valid <a href="#data-package"><code>datapackage.json</code></a> can be easily validated using the <a href="https://framework.frictionlessdata.io/">frictionless framework</a>, which can be installed and invoke as follows:</p>
+<p>Data with a valid <a href="#data-package"><code>datapackage.json</code></a> can be easily validated using the <a href="https://framework.frictionlessdata.io/">frictionless framework</a>, which can be installed and invoked as follows:</p>
 <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>frictionless
 frictionless<span class="w"> </span>validate<span class="w"> </span>path/to/your/datapackage.json
 </code></pre></div>
 <h6 id="specific-files">Specific files<a class="headerlink" href="#specific-files" title="Permanent link"> ¶</a></h6>
 <p>Specific files can be validated by running the frictionless framework against them and their corresponding schemas as follows:</p>
-<div class="highlight"><pre><span></span><code>frictionless<span class="w"> </span>validate<span class="w"> </span>vehicles.csv<span class="w"> </span>--schema<span class="w"> </span>https://raw.githubusercontent.com/TIDES-transit/TIDES/main/spec/vehicles.schema.json
+<div class="highlight"><pre><span></span><code>frictionless<span class="w"> </span>validate<span class="w"> </span>vehicles.csv<span class="w"> </span>--schema<span class="w"> </span>https://raw.githubusercontent.com/TIDES-transit/TIDES/main/spec/vehicles.schema.json<span class="w">  </span>--schema-sync<span class="w"> </span>
 </code></pre></div>
 <h2 id="data-list">Data List<a class="headerlink" href="#data-list" title="Permanent link"> ¶</a></h2>
 <table>
