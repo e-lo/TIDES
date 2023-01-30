@@ -275,7 +275,7 @@
 <h4 id="adding-examples">Adding Examples<a class="headerlink" href="#adding-examples" title="Permanent link"> ¶</a></h4>
 <p>We encourage the addition of examples, but please follow the following guidelines:</p>
 <ol>
-<li><em>No large files</em> This isn’t the place to store your data, rather to document some minimal examples.  The recommended size is 100-1000 records per file, more if absolutely required to reproduce an issue with the spec.  All individual files should be well under 50 MB.  </li>
+<li><em>No large files</em> This isn’t the place to store your data, rather to document some minimal examples.  The recommended size is 100-1000 records per file, more if absolutely required to reproduce an issue with the spec.  The whole data package should be well under 50 MB.  </li>
 <li><em>Include Metadata</em> as specified in <a href="#data-package"><code>datapackage.json</code></a>.</li>
 <li><em>Include a README.md</em> in the base folder of your example with an overview so that it can be included in the documentation.</li>
 </ol>
@@ -297,8 +297,8 @@
 </tr>
 <tr>
 <td><code>name</code></td>
-<td>Identifier string as a URL-friendly slug.</td>
-<td>Required</td>
+<td>Short identifier string as a <a href="https://en.wikipedia.org/wiki/Clean_URL#Slug">URL-friendly slug</a>.</td>
+<td>Recommended</td>
 </tr>
 <tr>
 <td><code>description</code></td>
@@ -355,7 +355,7 @@
 <tbody>
 <tr>
 <td><code>name</code></td>
-<td>Short sluggable name used to refer to data in this file.</td>
+<td>Short <a href="https://en.wikipedia.org/wiki/Clean_URL#Slug">sluggable</a> name used to refer to data in this file. <code>name</code> must be unique within this datapackage.</td>
 <td>Required</td>
 </tr>
 <tr>
@@ -399,6 +399,11 @@
 <td><code>product</code></td>
 <td>What product was used to generate this data (directly or indirectly)?</td>
 <td>Recommended</td>
+</tr>
+<tr>
+<td><code>product_version</code></td>
+<td>Describe the version of the product was used.</td>
+<td>Optional</td>
 </tr>
 <tr>
 <td><code>vendor</code></td>
