@@ -2,32 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://TIDES-transit.github.io/TIDES/pr1-sample-data/</loc>
-         <lastmod>2023-01-30</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://TIDES-transit.github.io/TIDES/pr1-sample-data/architecture/</loc>
-         <lastmod>2023-01-30</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://TIDES-transit.github.io/TIDES/pr1-sample-data/contributors/</loc>
-         <lastmod>2023-01-30</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://TIDES-transit.github.io/TIDES/pr1-sample-data/development/</loc>
-         <lastmod>2023-01-30</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://TIDES-transit.github.io/TIDES/pr1-sample-data/samples/</loc>
-         <lastmod>2023-01-30</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://TIDES-transit.github.io/TIDES/pr1-sample-data/tables/</loc>
-         <lastmod>2023-01-30</lastmod>
+         <lastmod>2023-03-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
